@@ -1,0 +1,102 @@
+-*-org-*-
+* How to show/hide outlines
+** TAB
+   If the outlines has N levels, press TAB N times will show/hide outlines.
+** C+u TAB
+   C+u TAB will toggle between every level
+** C+u C+u C+u TAB
+   Show all levels.
+
+* Other operation
+** C+c C+k 
+   Expose all the headings of subtree
+** C+c TAB 
+   expose all direct children of the subtree
+
+* Jump between headline
+** C+c C+p
+   Previous visibale headline
+** C+c C+n
+   Next visible headline
+** C+c C+f
+   Forward same level headline
+** C+c C+b
+   Backward same level headline
+** C+c C+u
+   Up to higher level headline
+
+* list
+  List example
+  + Test
+    - Test
+    - Test
+  + Test
+    - Test
+    - Test
+      1) Test
+      2) Test
+	 :DrawName:
+	 Not See.
+	 :END:
+      3) Test
+  Footnotes[1]
+
+* table
+** C+c C+c 
+   Align  
+| Name    | Phone | Age |
+|---------+-------+-----|
+| Lillian | 12234 |  30 |
+| Jacky   |  2334 |  39 |
+** C+c | 
+   3x5 3 columns, 5 rows
+   TAB jump to next tab
+| Date | Address | Affair |
+|------+---------+--------|
+|    1 |       2 |      3 |
+|    4 |       5 |      6 |
+|    7 |       8 |      9 |
+|   10 |      11 |     12 |
+** C+c + 
+   Sum current column, result in echo area and can be paste by C+y
+* export html
+** C+c C+e b
+   export html and open in browser
+
+* Hyperlinks
+** Format
+  [[http://baidu.com/][baidu]]
+  [[http://www.sina.com][sina]]
+** C+c C+l
+   To edit link and description
+
+* TODO [#1] org-mode语法 :@org语法:
+** C+c C+t 
+   TODO change to DONE
+* 问题
+- 正文中下划线导出时，导致下划连线后面文字变成下标
+
+- 导出成html时换行问题(org 7.9.3才有此问题，8.3.2没有此问题)
+  在org中直接换行，导出html时，换行转成了一个空格。需要增加一个空行才能在导出成html时有换行效果。
+- 导出成markdown问题
+  - M+x org-md-export-as-markdown 没有
+  - C+c C+e 无法看到导出成markdown的选项
+  - C+h v org-export-backends 不支持markdown
+  - 查看当前org-mdoe版本 M+x org-version Org-mode version 7.9.3f (release_7.9.3f-17-g7524ef @ /usr/share/emacs/24.3/lisp/org/)
+  - 升级org M+x package-install RET org,重新启动emacs查看org版本为:Org-mode version 8.3.2 (8.3.2-10-g00dacd-elpa @ /home/mll/.emacs.d/elpa/org-20151005/)
+  - 编辑.emacs，使C+c C+e中默认有markdown菜单，否则需要使用M+x org-md-export-as-markdown/ org-md-export-to-markdown来转换
+    #+BEGIN_SRC Emacs-lisp
+    (eval-after-load "org"
+  '(require 'ox-md nil t))
+  #+END_SRC
+  - 参考[[http://randomgeekery.org/post/2014/exporting-from-org-to-markdown/][exporting-from-org-to-markdown]]
+
+<<测试内部链接>>
+
+[[测试内部链接][内部]]
+...
+[1]The link is: http://www.baidu.com
+
+
+
+

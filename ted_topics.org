@@ -1,0 +1,23 @@
+| Topics        | Number |
+|---------------+--------|
+| Technology    |    587 |
+| Culture       |    463 |
+| Science       |    443 |
+| Global Issues |    425 |
+| Design        |    343 |
+| Business      |    290 |
+| Entertainment |    277 |
+| Arts          |    189 |
+| Education     |    164 |
+| Politics      |    151 |
+| Health        |    144 |
+| Creativity    |    138 |
+| Art           |    130 |
+| Music         |    120 |
+| Biology       |    114 |
+| Economics     |    113 |
+| Medicine      |    113 |
+| Brain         |    107 |
+| Cities        |    102 |
+| Storytelling  |    100 |
+|               |        |

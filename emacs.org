@@ -1,0 +1,118 @@
+* emacs 学习笔记
+
+** 快捷键
+C+v screen up
+M+v screen down
+C+l cursor center/top/bottom
+C+p previous line
+C+n next line
+C+f forward one char
+C+b backward one char
+M+f forward one word
+M+b backward one word
+C+a the beginning of line
+C+e the end of line
+M+a the beginning of sentence
+M+e the end of sentence
+
+C+ operating char,line
+M+ operating word,sentence,paragraph
+
+M+< begining of doc
+M+> end of doc
+
+C+u 8 C/M + command do command 8 times
+exception:
+C+u 8 C+v scroll down 8 lines
+C+u 8 M+v scroll up 8 lines
+
+C+g Cancel
+
+C+x 0 close current window
+C+x 1 close all window except current
+
+C+u 8 * Input ********
+
+DEL Delete one character before
+C+d Delete one character after
+
+M+DEL Kill one word before
+M+d Kill one word after
+
+C+k kill to end of line
+M+k kill to end of sentence
+
+C+SPC move curosr to a point and then C+w:  Kill text between selection
+C+@ if C+SPC is used by inputmethod switch
+
+killed text can be yank, deleted text can't
+
+C+u 8 DEL C+u 8 d are for kill text.
+
+C+w kill the selected text
+M+w copy the selected text
+
+C+y Yanking the last killed text
+M+y Yanking the killed text before last.
+
+C+/ undo
+C+x u undo/redo
+
+C+x C+f Open file
+C+x C+s Save
+
+C+x C+b List buffers
+C+x b File name to open the buffer
+
+C+x 
+M+x 
+
+C+x C+c Exit emacs 
+
+C+z Suspend
+fg Bring emacs to foreground
+
+M+x replace-string
+M+x recover-file 
+M+x auto-fillmode
+
+C+x f 20, and then M+q make paragraph 20 columns
+
+C+x Search forward
+C+r Search reverse
+
+C+x 2 Split window
+
+C+M+v Scrolling the bottom window
+
+C+x o Switch to otehr window
+
+? C+x 4 C+f Open an file and Split vertical 
+
+M+x make-frame Open current doc in new window
+M+x delete-frame Close current window
+
+C+h ? Get help
+C+h c command(C+p) Displays a brief description of command(C+p)
+C+h k command(C+p) Displays more info about command(C+p)
+C+h f function(previous-line) Displays info about function(previous-line)
+C+h a keyword(file) Displays all M+x command contains keyword(file)
+C+h i Manuls for packages installed on system. m emacs to read emacs manual. ? to get hint.
+C+h r reading tutorial
+C+x C+d Dired opration
+C+h i m Dired
+
+** 问题
+- 在terminal中打开emacs
+  emacs -nw 
+
+- 在emacs中使用fcitx输入法
+   LC_CTYPE=zh_CN.utf8 emacs
+
+- 默认在terminal中打开emacs，并且可以使用fcitx输入法
+   在~/.bashrc中添加
+   alias emacs='LC_CTYPE=zh_CN.utf8 emacs -nw'
+   source ~/.bashrc
+
+- 在终端下面组合键M+的问题
+    若M+被系统抢用或者提示没有定义，则使用C+M+代替。(部分组合还是不行)
